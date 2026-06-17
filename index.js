@@ -3,6 +3,12 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    // Redirect the bare domain to the canonical www host (301, keeps path + query)
+    if (url.hostname === 'srisaispecialitydentalcare.in') {
+      url.hostname = 'www.srisaispecialitydentalcare.in';
+      return Response.redirect(url.toString(), 301);
+    }
+
     // HTML must always revalidate so deploys show immediately (no stale cache)
     const htmlHeaders = (src, forceType) => {
       const h = new Headers(src ? src.headers : undefined);
