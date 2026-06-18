@@ -65,7 +65,7 @@
   .ssdc-snd:disabled{background:#cbd5e1;cursor:not-allowed}
   .ssdc-snd svg{width:17px;height:17px;fill:#fff}
   @media(max-width:768px){
-    #ssdc-launch{bottom:calc(89px + env(safe-area-inset-bottom,0px));right:14px;width:74px;height:58px;padding:0}
+    #ssdc-launch{bottom:calc(84px + env(safe-area-inset-bottom,0px));right:14px;width:74px;height:58px;padding:0}
     #ssdc-launch .ssdc-launch-txt{font-size:13px}
     .ssdc-panel{bottom:74px;right:10px;left:10px;top:64px;width:auto;height:auto;max-height:none}
     .ssdc-in{font-size:16px}
