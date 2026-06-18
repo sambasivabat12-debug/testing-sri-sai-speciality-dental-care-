@@ -1308,7 +1308,15 @@ nav.scrolled{background:rgba(10,37,64,.88)!important;backdrop-filter:blur(28px)!
 .treat-card:hover{box-shadow:0 30px 80px rgba(10,102,194,.2),0 0 0 1px rgba(47,138,224,.3)!important}
 .doc-card:hover{box-shadow:0 40px 100px rgba(10,102,194,.22)!important}
 /* reveal CSS opacity removed - GSAP handles this internally */
-</style>
+
+    /* Footer treatments — unified icon system */
+    .ftr-tr-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0;}
+    .ftr-tr{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;line-height:1.25;transition:color .3s ease;}
+    .ftr-tr img{width:22px;height:22px;flex:0 0 22px;object-fit:contain;transition:transform .3s ease,filter .3s ease;}
+    .ftr-tr:hover{color:#fff;}
+    .ftr-tr:hover img{transform:scale(1.12);filter:drop-shadow(0 0 5px rgba(232,185,35,.85)) brightness(1.08);}
+    @media(min-width:768px){.ftr-tr{font-size:13.5px;}.ftr-tr img{width:25px;height:25px;flex-basis:25px;}}
+  </style>
 <script>if(window.location.hash&&(window.location.hash.includes('invite_token')||window.location.hash.includes('recovery_token')||window.location.hash.includes('confirmation_token'))){window.location.href='/admin/'+window.location.hash;}</script>
 
 <!-- GSAP loaded dynamically below -->
@@ -2469,15 +2477,15 @@ nav:not(.scrolled) .hamburger span{background:#fff!important}
     <!-- Col 3 — Treatments -->
     <div>
       <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1);">Treatments</div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:9px;">
-        <li><a href="/dental-implants" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">🔩 Dental Implants</a></li>
-        <li><a href="/dental-crowns" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">👑 Zirconium Crowns</a></li>
-        <li><a href="/smile-design" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">😁 Smile Design</a></li>
-        <li><a href="/root-canal-treatment" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">🦷 Root Canal</a></li>
-        <li><a href="/kids-dentistry" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">🧒 Pediatric Dentistry</a></li>
-        <li><a href="/dental-braces" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">🦷 Braces &amp; Aligners</a></li>
-        <li><a href="/treatments" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">🧹 Scaling &amp; Cleaning</a></li>
-        <li><a href="/teeth-whitening" style="color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='var(--gold2)'" onmouseout="this.style.color='rgba(255,255,255,.65)'">✨ Teeth Whitening</a></li>
+      <ul class="ftr-tr-list">
+        <li><a href="/dental-implants" class="ftr-tr"><img src="/footer-icons/implants.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Dental Implants</a></li>
+        <li><a href="/dental-crowns" class="ftr-tr"><img src="/footer-icons/crowns.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Zirconium Crowns</a></li>
+        <li><a href="/smile-design" class="ftr-tr"><img src="/footer-icons/smile.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Smile Design</a></li>
+        <li><a href="/root-canal-treatment" class="ftr-tr"><img src="/footer-icons/root-canal.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Root Canal</a></li>
+        <li><a href="/kids-dentistry" class="ftr-tr"><img src="/footer-icons/pediatric.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Pediatric Dentistry</a></li>
+        <li><a href="/dental-braces" class="ftr-tr"><img src="/footer-icons/braces.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Braces &amp; Aligners</a></li>
+        <li><a href="/treatments" class="ftr-tr"><img src="/footer-icons/cleaning.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Scaling &amp; Cleaning</a></li>
+        <li><a href="/teeth-whitening" class="ftr-tr"><img src="/footer-icons/whitening.svg" alt="" width="22" height="22" loading="lazy" decoding="async">Teeth Whitening</a></li>
       </ul>
     </div>
 
