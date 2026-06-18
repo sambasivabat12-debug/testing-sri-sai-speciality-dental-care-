@@ -21,10 +21,10 @@
 
   var CSS = `
   #ssdc-chat *{box-sizing:border-box}
-  #ssdc-launch{position:fixed;bottom:116px;right:28px;height:50px;padding:0 20px;border-radius:999px;background:linear-gradient(135deg,#0D47A1,#1976D2);border:none;cursor:pointer;box-shadow:0 8px 22px rgba(13,71,161,.42);z-index:940;display:flex;align-items:center;justify-content:center;gap:7px;color:#fff;white-space:nowrap;transition:transform .28s,box-shadow .28s}
+  #ssdc-launch{position:fixed;bottom:116px;right:28px;width:80px;height:62px;padding:0;border-radius:18px;background:linear-gradient(135deg,#0D47A1,#1976D2);border:none;cursor:pointer;box-shadow:0 8px 22px rgba(13,71,161,.42);z-index:940;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#fff;transition:transform .28s,box-shadow .28s}
   #ssdc-launch:hover,#ssdc-launch:active{transform:scale(1.05);box-shadow:0 12px 28px rgba(13,71,161,.55)}
-  #ssdc-launch .ssdc-launch-txt{display:inline-flex;align-items:center;gap:7px;font:700 15px/1 'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.2px}
-  #ssdc-launch .ssdc-launch-ic{font-size:17px;line-height:1}
+  #ssdc-launch .ssdc-launch-txt{display:flex;flex-direction:column;align-items:center;line-height:1.12;font:800 14px/1.12 'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:.2px}
+  #ssdc-launch .ssdc-launch-ic{font-size:16px;line-height:1;margin-bottom:1px}
   @keyframes ssdcPulse{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(1.7);opacity:0}}
   #ssdc-launch .ssdc-nudge{position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;padding:0 5px;background:#16a34a;color:#fff;font:800 11px/20px 'Nunito',sans-serif;border-radius:10px;text-align:center;border:2px solid #fff}
   .ssdc-panel{position:fixed;bottom:116px;right:28px;width:374px;max-width:calc(100vw - 32px);height:558px;max-height:calc(100vh - 150px);background:#fff;border-radius:18px;box-shadow:0 24px 64px rgba(10,37,64,.30);z-index:945;display:none;flex-direction:column;overflow:hidden;border:1px solid #d2e4f5;font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif}
@@ -65,8 +65,8 @@
   .ssdc-snd:disabled{background:#cbd5e1;cursor:not-allowed}
   .ssdc-snd svg{width:17px;height:17px;fill:#fff}
   @media(max-width:768px){
-    #ssdc-launch{bottom:calc(92px + env(safe-area-inset-bottom,0px));right:12px;height:46px;padding:0 16px}
-    #ssdc-launch .ssdc-launch-txt{font-size:14px}
+    #ssdc-launch{bottom:calc(92px + env(safe-area-inset-bottom,0px));right:14px;width:74px;height:58px;padding:0}
+    #ssdc-launch .ssdc-launch-txt{font-size:13px}
     .ssdc-panel{bottom:74px;right:10px;left:10px;top:64px;width:auto;height:auto;max-height:none}
     .ssdc-in{font-size:16px}
   }`;
@@ -79,7 +79,7 @@
   root.id = 'ssdc-chat';
   root.innerHTML =
     '<button id="ssdc-launch" aria-label="Need help? Chat with us">' +
-      '<span class="ssdc-launch-txt"><span class="ssdc-launch-ic" aria-hidden="true">💬</span>Need Help?</span>' +
+      '<span class="ssdc-launch-txt"><span class="ssdc-launch-ic" aria-hidden="true">💬</span><span>Need</span><span>Help?</span></span>' +
     '</button>' +
     '<div class="ssdc-panel" role="dialog" aria-label="Chat with Sri Sai Dental Care">' +
       '<div class="ssdc-hd">' +
