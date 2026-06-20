@@ -197,7 +197,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:12px 24px;display:fl
 @media(min-width:900px){.related-grid{grid-template-columns:1fr 1fr 1fr}}
 .related-card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:14px;transition:all .3s}
 .related-card:hover{border-color:var(--teal2);box-shadow:0 12px 30px var(--shadow-teal);transform:translateY(-3px)}
-.related-icon{width:40px;height:40px;border-radius:10px;background:var(--teal3);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.related-icon{width:44px;height:44px;border-radius:11px;overflow:hidden;flex-shrink:0;box-shadow:0 2px 8px var(--shadow-teal)}
+.related-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .related-name{font-size:13.5px;font-weight:700;color:var(--navy)}
 .related-arrow{margin-left:auto;color:var(--teal);font-size:16px}
 
@@ -387,12 +388,12 @@ footer strong{color:#fff}
     <p class="sec-eyebrow">Explore</p>
     <h2 class="sec-title">Related <em>Treatments</em></h2>
     <div class="related-grid">
-      <a href="/dental-implants" class="related-card"><div class="related-icon">🦷</div><div class="related-name">Dental Implants</div><div class="related-arrow">→</div></a>
-      <a href="/wisdom-tooth-removal" class="related-card"><div class="related-icon">🪥</div><div class="related-name">Wisdom Tooth Removal</div><div class="related-arrow">→</div></a>
-      <a href="/dental-bridges" class="related-card"><div class="related-icon">🌉</div><div class="related-name">Dental Bridges</div><div class="related-arrow">→</div></a>
-      <a href="/smile-design" class="related-card"><div class="related-icon">✨</div><div class="related-name">Smile Design</div><div class="related-arrow">→</div></a>
-      <a href="/root-canal-treatment" class="related-card"><div class="related-icon">🩺</div><div class="related-name">Root Canal Treatment</div><div class="related-arrow">→</div></a>
-      <a href="/treatments" class="related-card"><div class="related-icon">📋</div><div class="related-name">View All Treatments</div><div class="related-arrow">→</div></a>
+      <a href="/dental-implants" class="related-card"><div class="related-icon"><img src="/service-icons/implants.svg" alt="Dental Implants" loading="lazy"></div><div class="related-name">Dental Implants</div><div class="related-arrow">→</div></a>
+      <a href="/wisdom-tooth-removal" class="related-card"><div class="related-icon"><img src="/service-icons/wisdom-tooth.svg" alt="Wisdom Tooth Removal" loading="lazy"></div><div class="related-name">Wisdom Tooth Removal</div><div class="related-arrow">→</div></a>
+      <a href="/dental-bridges" class="related-card"><div class="related-icon"><img src="/service-icons/bridges.svg" alt="Dental Bridges" loading="lazy"></div><div class="related-name">Dental Bridges</div><div class="related-arrow">→</div></a>
+      <a href="/smile-design" class="related-card"><div class="related-icon"><img src="/service-icons/smile-makeover.svg" alt="Smile Design" loading="lazy"></div><div class="related-name">Smile Design</div><div class="related-arrow">→</div></a>
+      <a href="/root-canal-treatment" class="related-card"><div class="related-icon"><img src="/service-icons/root-canal.svg" alt="Root Canal Treatment" loading="lazy"></div><div class="related-name">Root Canal Treatment</div><div class="related-arrow">→</div></a>
+      <a href="/treatments" class="related-card"><div class="related-icon"><img src="/service-icons/tooth-decay.svg" alt="View All Treatments" loading="lazy"></div><div class="related-name">View All Treatments</div><div class="related-arrow">→</div></a>
     </div>
   </div>
 </div>
