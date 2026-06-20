@@ -288,7 +288,7 @@
   }
   function startBooking(){
     lock();
-    bot("I'd be glad to help you book, " + (lead.name || 'there') + "! 📅 What date would you like to come in? (e.g. 25 June, or tomorrow)", function(){ step='book_date'; unlock('Preferred date…'); });
+    bot("I'd be glad to help you book, " + (lead.name || 'there') + "! What date would you like to come in? (e.g. 25 June, or tomorrow)", function(){ step='book_date'; unlock('Preferred date…'); });
   }
   function submit(){
     var v = (input.value || '').trim();
