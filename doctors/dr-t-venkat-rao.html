@@ -171,7 +171,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:12px 24px;display:fl
 @media(min-width:1000px){.exp-grid{grid-template-columns:1fr 1fr 1fr}}
 .exp-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-md);padding:26px 22px;transition:all .35s cubic-bezier(.16,1,.3,1)}
 .exp-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px var(--shadow-teal);border-color:var(--teal2)}
-.exp-card-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--teal3),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.exp-card-icon{width:100%;aspect-ratio:1200/630;border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:0 4px 14px var(--shadow-teal)}
+.exp-card-icon img{width:100%;height:100%;object-fit:cover;display:block}
 .exp-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px}
 .exp-card p{font-size:13.5px;color:var(--soft);line-height:1.7}
 
@@ -318,12 +319,12 @@ footer strong{color:#fff}
   <h2 class="sec-title">Areas of <em>Expertise</em></h2>
   <p class="sec-body">Decades of focused practice across the full range of restorative and preventive dentistry.</p>
   <div class="exp-grid">
-    <div class="exp-card"><div class="exp-card-icon">🪥</div><h3>Root Canal Treatment</h3><p>Preserving natural teeth through advanced endodontic care.</p></div>
-    <div class="exp-card"><div class="exp-card-icon">👑</div><h3>Crowns &amp; Bridges</h3><p>Restoring damaged or missing teeth with durable and aesthetic solutions.</p></div>
-    <div class="exp-card"><div class="exp-card-icon">🦷</div><h3>Full Mouth Rehabilitation</h3><p>Comprehensive treatment planning for complex dental conditions.</p></div>
-    <div class="exp-card"><div class="exp-card-icon">✨</div><h3>Smile Restoration</h3><p>Enhancing oral health, function, and smile aesthetics.</p></div>
-    <div class="exp-card"><div class="exp-card-icon">🛡️</div><h3>Preventive Dentistry</h3><p>Routine examinations, professional cleanings, and preventive care.</p></div>
-    <div class="exp-card"><div class="exp-card-icon">👨‍👩‍👧‍👦</div><h3>General Family Dentistry</h3><p>Comprehensive dental care for children, adults, and seniors.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/root-canal.svg" alt="Root Canal Treatment" loading="lazy"></div><h3>Root Canal Treatment</h3><p>Preserving natural teeth through advanced endodontic care.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/crowns.svg" alt="Crowns & Bridges" loading="lazy"></div><h3>Crowns &amp; Bridges</h3><p>Restoring damaged or missing teeth with durable and aesthetic solutions.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/bridges.svg" alt="Full Mouth Rehabilitation" loading="lazy"></div><h3>Full Mouth Rehabilitation</h3><p>Comprehensive treatment planning for complex dental conditions.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/smile-makeover.svg" alt="Smile Restoration" loading="lazy"></div><h3>Smile Restoration</h3><p>Enhancing oral health, function, and smile aesthetics.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/tooth-decay.svg" alt="Preventive Dentistry" loading="lazy"></div><h3>Preventive Dentistry</h3><p>Routine examinations, professional cleanings, and preventive care.</p></div>
+    <div class="exp-card"><div class="exp-card-icon"><img src="/service-icons/child-visit.svg" alt="General Family Dentistry" loading="lazy"></div><h3>General Family Dentistry</h3><p>Comprehensive dental care for children, adults, and seniors.</p></div>
   </div>
 </div>
 
