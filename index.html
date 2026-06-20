@@ -2627,13 +2627,59 @@ nav:not(.scrolled) .hamburger span{background:#fff!important}
 
   <!-- Mobile footer styles -->
   <style>
-  @media(max-width:768px){
-    footer > div:first-child{grid-template-columns:1fr 1fr!important;padding:40px 20px 32px!important}
-    footer > div:first-child > div:first-child{grid-column:1/-1}
-    footer > div:last-child{padding:16px 20px!important;flex-direction:column;text-align:center;gap:6px!important}
+  @media(max-width:900px){
+    footer > div:first-child{
+      grid-template-columns:1fr!important;
+      gap:36px!important;
+      padding:44px 24px 36px!important;
+      text-align:center!important;
+    }
+    /* Col 1 — Brand: center logo block, address, phone, hours */
+    footer > div:first-child > div:nth-child(1) > div:first-child{
+      justify-content:center!important;
+    }
+    footer > div:first-child > div:nth-child(1) p,
+    footer > div:first-child > div:nth-child(1) > div{
+      max-width:340px!important;
+      margin-left:auto!important;
+      margin-right:auto!important;
+    }
+    /* Section headings centered */
+    footer > div:first-child > div > div:first-child{
+      text-align:center!important;
+    }
+    /* Quick Links list centered */
+    footer > div:first-child > div:nth-child(2) ul{
+      align-items:center!important;
+    }
+    /* Treatments list — center the icon+text rows */
+    footer .ftr-tr-list{
+      align-items:center!important;
+    }
+    footer .ftr-tr{
+      justify-content:center!important;
+    }
+    /* Book Now buttons — constrain width, center */
+    footer > div:first-child > div:nth-child(4) a[href^="tel:"],
+    footer > div:first-child > div:nth-child(4) a[href^="https://wa.me"]{
+      max-width:280px!important;
+      margin-left:auto!important;
+      margin-right:auto!important;
+    }
+    /* Social icons row centered */
+    footer > div:first-child > div:nth-child(4) > div:last-child{
+      justify-content:center!important;
+    }
+    /* Bottom bar */
+    footer > div:last-child{
+      padding:18px 20px!important;
+      flex-direction:column!important;
+      text-align:center!important;
+      gap:8px!important;
+    }
   }
   @media(max-width:480px){
-    footer > div:first-child{grid-template-columns:1fr!important}
+    footer > div:first-child{padding:36px 18px 30px!important}
   }
   </style>
 
