@@ -287,6 +287,12 @@ async function loadPost(){
     document.getElementById('post-content').innerHTML=marked.parse(body);
     if(fm.tags){document.getElementById('post-tags').innerHTML=fm.tags.split(',').map(t=>'<span class="post-tag"># '+t.trim()+'</span>').join('');}
     if(fm.author&&fm.author.includes('Sai Vakula')){document.getElementById('author-initials').textContent='SV';document.getElementById('author-name').textContent='Dr. T. Sai Vakula';}
+    var schemaObj={"@context":"https://schema.org","@type":"BlogPosting","headline":fm.title||'',"description":fm.meta_description||'',"datePublished":fm.date||'',"dateModified":fm.date||'',"author":{"@type":"Person","name":fm.author||"Sri Sai Dental"},"publisher":{"@type":"Dentist","name":"Sri Sai Speciality Dental Care","logo":{"@type":"ImageObject","url":"https://www.srisaispecialitydentalcare.in/logo.webp"}},"mainEntityOfPage":{"@type":"WebPage","@id":window.location.href},"url":window.location.href};
+    if(fm.thumbnail)schemaObj.image="https://www.srisaispecialitydentalcare.in"+fm.thumbnail;
+    var schemaTag=document.createElement('script');
+    schemaTag.type='application/ld+json';
+    schemaTag.textContent=JSON.stringify(schemaObj);
+    document.head.appendChild(schemaTag);
   }catch(e){
     document.getElementById('post-content').innerHTML='<p style="color:red;text-align:center">Post not found. <a href="/blog/">← Go back to blog</a></p>';
   }
